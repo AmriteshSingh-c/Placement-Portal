@@ -62,7 +62,7 @@ if (isset($_SESSION['id_user']) || isset($_SESSION['id_company'])) {
                 </div>
                 <div class="form-group">
                   <label>Date Of Birth</label>
-                  <input class="form-control input-lg" type="date" id="dob" min="1960-01-01" max="1999-01-31" name="dob" placeholder="Date Of Birth">
+                  <input class="form-control input-lg" type="date" id="dob" min="1960-01-01" max="2023-01-31" name="dob" placeholder="Date Of Birth">
                 </div>
                 <div class="form-group">
                   <input class="form-control input-lg" type="text" id="age" name="age" placeholder="Age" readonly>
@@ -77,12 +77,7 @@ if (isset($_SESSION['id_user']) || isset($_SESSION['id_company'])) {
                 <div class="form-group">
                   <input class="form-control input-lg" type="text" id="stream" name="stream" placeholder="Stream">
                 </div>
-                <div class="form-group checkbox">
-                  <label><input type="checkbox"> I accept terms & conditions</label>
-                </div>
-                <div class="form-group">
-                  <button class="btn btn-flat btn-success">Register</button>
-                </div>
+                
                 <?php
                 //If User already registered with this email then show error message.
                 if (isset($_SESSION['registerError'])) {
@@ -129,12 +124,18 @@ if (isset($_SESSION['id_user']) || isset($_SESSION['id_company'])) {
                   <textarea class="form-control input-lg" rows="4" id="skills" name="skills" placeholder="Enter Skills"></textarea>
                 </div>
                 <div class="form-group">
-                  <input class="form-control input-lg" type="text" id="designation" name="designation" placeholder="Designation">
+                  <input class="form-control input-lg" type="text" id="designation" name="designation" placeholder="Designation (E.g.Android Developer)">
                 </div>
 
                 <div class="form-group">
                   <label style="color: red;">File Format PDF Only!</label>
                   <input type="file" name="resume" class="btn btn-flat btn-danger" required>
+                </div>
+                <div class="form-group checkbox">
+                  <label><input type="checkbox"> I accept terms & conditions</label>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-flat btn-success">Register</button>
                 </div>
               </div>
             </form>
